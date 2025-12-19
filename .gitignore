@@ -1,21 +1,85 @@
-.gradle
+# ===========================
+# Gradle
+# ===========================
+.gradle/
 **/build/
 !**/src/**/build/
 
-# Ignore Gradle GUI config
+# Gradle GUI config
 gradle-app.setting
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
+# Gradle cache
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
+# Keep Gradle wrapper files (important for version consistency)
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# ===========================
+# IDE - IntelliJ IDEA
+# ===========================
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# ===========================
+# IDE - Eclipse
+# ===========================
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings/
+bin/
+
+# ===========================
+# IDE - VS Code
+# ===========================
+.vscode/
+
+# ===========================
+# Fabric Mod Runtime
+# ===========================
+run/
+logs/
+*.log
+
+# ===========================
+# Java
+# ===========================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Keep Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ===========================
+# OS Generated Files
+# ===========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# ===========================
+# Misc
+# ===========================
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "shootexp_fabric",
+  "version": "${version}",
+  "name": "ShootEXP Fabric",
+  "description": "我想它应该是一个交友插件的Fabric版本",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/shootexp_fabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.lemonmiaow.shootexp_fabric.ShootexpFabric"
+    ]
+  },
+  "mixins": [
+    "shootexp_fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

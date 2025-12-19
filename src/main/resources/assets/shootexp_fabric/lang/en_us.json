@@ -1,0 +1,25 @@
+{
+    "shootexp.item.name": "§d%OWNER%'s Sticky Experience",
+    "shootexp.item.lore": [
+        "§7Owner: §f%OWNER%",
+        "§7Recipient: §f%RECIPIENT%",
+        "§7Experience: §a%AMOUNT%"
+    ],
+    "shootexp.message.shoot": "§d%ATTACKER% §7attacked §d%DEFENDER% §e%TIMES% §7times, shot §a%AMOUNT% §7experience!",
+    "shootexp.message.shoot_no_exp": "§d%ATTACKER% §7attacked §d%DEFENDER% §e%TIMES% §7times, but nothing came out...",
+    "shootexp.message.eat": "§d%PLAYER% §7ate §a%AMOUNT% §7experience from §d%OWNER% §7to §d%RECIPIENT%!",
+    "shootexp.command.invalid": "§cInvalid command!",
+    "shootexp.command.no_permission": "§cYou don't have permission to execute this command!",
+    "shootexp.command.player_only": "§cThis command can only be executed by players!",
+    "shootexp.command.status": "§7Player §d%PLAYER% §7status: shoot times §e%TIMES%§7, stock §a%STOCK%",
+    "shootexp.command.restore": "§aRestored!",
+    "shootexp.command.set": "§aSet!",
+    "shootexp.command.reloaded": "§aConfiguration reloaded!",
+    "shootexp.command.help.title": "§6=== ShootEXP Help ===",
+    "shootexp.command.help.help": "§e/shootexp help §7- Show help",
+    "shootexp.command.help.status": "§e/shootexp status [player] §7- View status",
+    "shootexp.command.help.item": "§e/shootexp item <owner> <recipient> <amount> §7- Get exp item",
+    "shootexp.command.help.restore": "§e/shootexp restore <all|times|stock> <player> [amount] §7- Restore status",
+    "shootexp.command.help.set": "§e/shootexp set <player> <times> <stock> §7- Set status",
+    "shootexp.command.help.reload": "§e/shootexp reload §7- Reload configuration"
+}

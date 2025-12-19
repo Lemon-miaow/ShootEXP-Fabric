@@ -1,0 +1,25 @@
+{
+    "shootexp.item.name": "§d%OWNER%的粘稠经验",
+    "shootexp.item.lore": [
+        "§7所有者: §f%OWNER%",
+        "§7赠予者: §f%RECIPIENT%",
+        "§7经验值: §a%AMOUNT%"
+    ],
+    "shootexp.message.shoot": "§d%ATTACKER% §7对 §d%DEFENDER% §7攻击了 §e%TIMES% §7次，射出了 §a%AMOUNT% §7点经验！",
+    "shootexp.message.shoot_no_exp": "§d%ATTACKER% §7对 §d%DEFENDER% §7攻击了 §e%TIMES% §7次，但是什么都没射出来...",
+    "shootexp.message.eat": "§d%PLAYER% §7吃掉了 §d%OWNER% §7给 §d%RECIPIENT% §7的 §a%AMOUNT% §7点经验！",
+    "shootexp.command.invalid": "§c无效的命令！",
+    "shootexp.command.no_permission": "§c你没有权限执行此命令！",
+    "shootexp.command.player_only": "§c此命令只能由玩家执行！",
+    "shootexp.command.status": "§7玩家 §d%PLAYER% §7的状态：射出次数 §e%TIMES%§7，经验存量 §a%STOCK%",
+    "shootexp.command.restore": "§a已恢复！",
+    "shootexp.command.set": "§a已设置！",
+    "shootexp.command.reloaded": "§a配置已重载！",
+    "shootexp.command.help.title": "§6=== ShootEXP 帮助 ===",
+    "shootexp.command.help.help": "§e/shootexp help §7- 获取帮助",
+    "shootexp.command.help.status": "§e/shootexp status [玩家] §7- 查看状态",
+    "shootexp.command.help.item": "§e/shootexp item <所有者> <赠予者> <数量> §7- 获取经验物品",
+    "shootexp.command.help.restore": "§e/shootexp restore <all|times|stock> <玩家> [数量] §7- 恢复状态",
+    "shootexp.command.help.set": "§e/shootexp set <玩家> <射出次数> <经验存量> §7- 设置状态",
+    "shootexp.command.help.reload": "§e/shootexp reload §7- 重载配置"
+}
