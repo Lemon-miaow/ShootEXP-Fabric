@@ -35,8 +35,9 @@ public class ExpItem {
                 .replace("%AMOUNT%", String.valueOf(amount));
         stack.set(DataComponents.ITEM_NAME, Component.literal(itemName));
 
-        List<String> loreStrings = Language.getStringList("shootexp.item.lore");
-        List<Component> loreComponents = loreStrings.stream()
+        String loreTemplate = Language.getString("shootexp.item.lore");
+        List<Component> loreComponents = java.util.Arrays.stream(loreTemplate.split("\\\\n"))
+                .filter(line -> !line.isEmpty())
                 .map(line -> line
                         .replace("%OWNER%", owner)
                         .replace("%RECIPIENT%", recipient)
@@ -56,7 +57,7 @@ public class ExpItem {
         if (customData == null) {
             return false;
         }
-        return customData.copyTag().getBoolean(TAG_MARKER);
+        return customData.copyTag().getBooleanOr(TAG_MARKER, false);
     }
 
     public static String getOwner(ItemStack stack) {
@@ -64,7 +65,7 @@ public class ExpItem {
         if (customData == null) {
             return "UNKNOWN";
         }
-        return customData.copyTag().getString(TAG_OWNER);
+        return customData.copyTag().getStringOr(TAG_OWNER, "UNKNOWN");
     }
 
     public static String getRecipient(ItemStack stack) {
@@ -72,7 +73,7 @@ public class ExpItem {
         if (customData == null) {
             return "UNKNOWN";
         }
-        return customData.copyTag().getString(TAG_RECIPIENT);
+        return customData.copyTag().getStringOr(TAG_RECIPIENT, "UNKNOWN");
     }
 
     public static int getAmount(ItemStack stack) {
@@ -80,6 +81,6 @@ public class ExpItem {
         if (customData == null) {
             return 0;
         }
-        return customData.copyTag().getInt(TAG_AMOUNT);
+        return customData.copyTag().getIntOr(TAG_AMOUNT, 0);
     }
 }

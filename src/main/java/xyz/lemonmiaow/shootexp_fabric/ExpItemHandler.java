@@ -7,7 +7,6 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -28,23 +27,23 @@ public class ExpItemHandler {
 
         consumeExpItem(player, world, stack);
 
-        return InteractionResult.SUCCESS;
+        return InteractionResult.SUCCESS_SERVER;
     }
 
-    public static InteractionResultHolder<ItemStack> onUseItem(Player player, Level world, InteractionHand hand) {
+    public static InteractionResult onUseItem(Player player, Level world, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
-        
-        if (world.isClientSide()) {
-            return InteractionResultHolder.pass(stack);
-        }
 
         if (!ExpItem.isExpItem(stack)) {
-            return InteractionResultHolder.pass(stack);
+            return InteractionResult.PASS;
+        }
+
+        if (world.isClientSide()) {
+            return InteractionResult.SUCCESS;
         }
 
         consumeExpItem(player, world, stack);
 
-        return InteractionResultHolder.success(stack);
+        return InteractionResult.SUCCESS_SERVER;
     }
 
     private static void consumeExpItem(Player player, Level world, ItemStack stack) {

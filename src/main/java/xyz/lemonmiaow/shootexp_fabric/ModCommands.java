@@ -29,16 +29,16 @@ public class ModCommands {
                         .then(net.minecraft.commands.Commands.literal("status")
                                 .executes(ModCommands::statusSelf)
                                 .then(net.minecraft.commands.Commands.argument("player", EntityArgument.player())
-                                        .requires(source -> source.hasPermission(2))
+                                        .requires(net.minecraft.commands.Commands.hasPermission(net.minecraft.commands.Commands.LEVEL_ADMINS))
                                         .executes(ModCommands::statusOther)))
                         .then(net.minecraft.commands.Commands.literal("item")
-                                .requires(source -> source.hasPermission(2))
+                                .requires(net.minecraft.commands.Commands.hasPermission(net.minecraft.commands.Commands.LEVEL_ADMINS))
                                 .then(net.minecraft.commands.Commands.argument("owner", StringArgumentType.word())
                                         .then(net.minecraft.commands.Commands.argument("recipient", StringArgumentType.word())
                                                 .then(net.minecraft.commands.Commands.argument("amount", IntegerArgumentType.integer(1))
                                                         .executes(ModCommands::item)))))
                         .then(net.minecraft.commands.Commands.literal("restore")
-                                .requires(source -> source.hasPermission(2))
+                                .requires(net.minecraft.commands.Commands.hasPermission(net.minecraft.commands.Commands.LEVEL_ADMINS))
                                 .then(net.minecraft.commands.Commands.literal("all")
                                         .then(net.minecraft.commands.Commands.argument("player", EntityArgument.player())
                                                 .executes(ModCommands::restoreAll)))
@@ -51,13 +51,13 @@ public class ModCommands {
                                                 .then(net.minecraft.commands.Commands.argument("amount", IntegerArgumentType.integer(1))
                                                         .executes(ModCommands::restoreStock)))))
                         .then(net.minecraft.commands.Commands.literal("set")
-                                .requires(source -> source.hasPermission(2))
+                                .requires(net.minecraft.commands.Commands.hasPermission(net.minecraft.commands.Commands.LEVEL_ADMINS))
                                 .then(net.minecraft.commands.Commands.argument("player", EntityArgument.player())
                                         .then(net.minecraft.commands.Commands.argument("times", IntegerArgumentType.integer(0))
                                                 .then(net.minecraft.commands.Commands.argument("stock", IntegerArgumentType.integer(0))
                                                         .executes(ModCommands::set)))))
                         .then(net.minecraft.commands.Commands.literal("reload")
-                                .requires(source -> source.hasPermission(2))
+                                .requires(net.minecraft.commands.Commands.hasPermission(net.minecraft.commands.Commands.LEVEL_ADMINS))
                                 .executes(ModCommands::reload))
         );
     }
@@ -68,7 +68,7 @@ public class ModCommands {
         source.sendSuccess(() -> Component.literal(Language.getString("shootexp.command.help.help")), false);
         source.sendSuccess(() -> Component.literal(Language.getString("shootexp.command.help.status")), false);
 
-        if (source.hasPermission(2)) {
+        if (source.permissions().hasPermission(net.minecraft.server.permissions.Permissions.COMMANDS_ADMIN)) {
             source.sendSuccess(() -> Component.literal(Language.getString("shootexp.command.help.item")), false);
             source.sendSuccess(() -> Component.literal(Language.getString("shootexp.command.help.restore")), false);
             source.sendSuccess(() -> Component.literal(Language.getString("shootexp.command.help.set")), false);

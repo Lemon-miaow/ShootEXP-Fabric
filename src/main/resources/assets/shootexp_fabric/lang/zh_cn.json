@@ -1,10 +1,6 @@
 {
     "shootexp.item.name": "§d%OWNER%的粘稠经验",
-    "shootexp.item.lore": [
-        "§7所有者: §f%OWNER%",
-        "§7赠予者: §f%RECIPIENT%",
-        "§7经验值: §a%AMOUNT%"
-    ],
+    "shootexp.item.lore": "§7所有者: §f%OWNER%\\n§7赠予者: §f%RECIPIENT%\\n§7经验值: §a%AMOUNT%",
     "shootexp.message.shoot": "§d%ATTACKER% §7对 §d%DEFENDER% §7攻击了 §e%TIMES% §7次，射出了 §a%AMOUNT% §7点经验！",
     "shootexp.message.shoot_no_exp": "§d%ATTACKER% §7对 §d%DEFENDER% §7攻击了 §e%TIMES% §7次，但是什么都没射出来...",
     "shootexp.message.eat": "§d%PLAYER% §7吃掉了 §d%OWNER% §7给 §d%RECIPIENT% §7的 §a%AMOUNT% §7点经验！",

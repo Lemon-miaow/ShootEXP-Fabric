@@ -1,7 +1,7 @@
 package xyz.lemonmiaow.shootexp_fabric;
 
 import xyz.lemonmiaow.shootexp_fabric.config.ModConfig;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
@@ -59,9 +59,9 @@ public class SneakDetector {
 
     public static void playSound(ServerPlayer player, String soundId) {
         try {
-            ResourceLocation id = ResourceLocation.parse(soundId);
+            Identifier id = Identifier.parse(soundId);
             SoundEvent sound = SoundEvent.createVariableRangeEvent(id);
-            player.serverLevel().playSound(
+            player.level().playSound(
                     null,
                     player.getX(),
                     player.getY(),

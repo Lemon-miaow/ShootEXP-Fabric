@@ -1,10 +1,6 @@
 {
     "shootexp.item.name": "§d%OWNER%'s Sticky Experience",
-    "shootexp.item.lore": [
-        "§7Owner: §f%OWNER%",
-        "§7Recipient: §f%RECIPIENT%",
-        "§7Experience: §a%AMOUNT%"
-    ],
+    "shootexp.item.lore": "§7Owner: §f%OWNER%\\n§7Recipient: §f%RECIPIENT%\\n§7Experience: §a%AMOUNT%",
     "shootexp.message.shoot": "§d%ATTACKER% §7attacked §d%DEFENDER% §e%TIMES% §7times, shot §a%AMOUNT% §7experience!",
     "shootexp.message.shoot_no_exp": "§d%ATTACKER% §7attacked §d%DEFENDER% §e%TIMES% §7times, but nothing came out...",
     "shootexp.message.eat": "§d%PLAYER% §7ate §a%AMOUNT% §7experience from §d%OWNER% §7to §d%RECIPIENT%!",
